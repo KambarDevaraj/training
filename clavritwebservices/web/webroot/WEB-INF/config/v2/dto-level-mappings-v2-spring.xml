@@ -1610,4 +1610,18 @@
         </property>
     </bean>
 
+
+    <bean parent="fieldSetLevelMapping" id="coursesDataWSDTOFieldSetLevelMapping">
+        <property name="dtoClass"
+                  value="com.hybris.clavrit.courses.data.CoursesDataWSDTO"/>
+        <property name="levelMapping">
+            <map>
+                <entry key="BASIC" value="courseCode,courseName,courseDuration,courseAmount"/>
+                <entry key="DEFAULT" value="courseCode,courseName,courseDuration,courseAmount"/>
+                <entry key="FULL" value="courseCode,courseName,courseDuration,courseAmount"/>
+            </map>
+        </property>
+    </bean>
+
+
 </beans>

@@ -359,6 +359,19 @@
 
         </typegroup>
 
+        <typegroup name="Dynamic Attribute Handler">
+            <itemtype code="Customer" autocreate="false" generate="false">
+                <description>Extending Customer type with additional attributes.</description>
+                <attributes>
+                    <attribute autocreate="true" qualifier="customer_site_age" type="java.lang.Integer">
+                        <modifiers write="false"/>
+                        <persistence type="dynamic" attributeHandler="customerSiteAge"/>
+                        <description>Dynamic attribute for customer site age</description>
+                    </attribute>
+                </attributes>
+            </itemtype>
+        </typegroup>
+
 
     </itemtypes>
 </items>

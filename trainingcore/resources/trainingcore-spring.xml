@@ -591,4 +591,15 @@
 		<property name="catalogVersionService" ref="catalogVersionService" />
 	</bean>
 
+	<bean id="coursesDao" class="com.clavrit.training.core.dao.CoursesDaoImpl">
+		<property name="flexibleSearchService" ref="flexibleSearchService"/>
+	</bean>
+
+	<bean id="coursesService" class="com.clavrit.training.core.service.CoursesServicesImpl">
+		<property name="coursesDao" ref="coursesDao"/>
+		<property name="modelService" ref="modelService"/>
+	</bean>
+
+	<bean id="customerSiteAge" class="com.clavrit.training.core.handler.CustomerSiteAgeHandler"/>
+
 </beans>

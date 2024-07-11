@@ -3,6 +3,7 @@
  */
 package com.clavrit.training.storefront.controllers;
 
+import com.clavrit.training.core.model.CoursesModel;
 import de.hybris.platform.acceleratorcms.model.components.CMSTabParagraphContainerModel;
 import de.hybris.platform.acceleratorcms.model.components.CartSuggestionComponentModel;
 import de.hybris.platform.acceleratorcms.model.components.CategoryFeatureComponentModel;
@@ -54,7 +55,8 @@ public interface ControllerConstants
 			String DynamicBannerComponent = _Prefix + DynamicBannerComponentModel._TYPECODE + _Suffix; 
 			String SubCategoryListComponent = _Prefix + SubCategoryListComponentModel._TYPECODE + _Suffix; 
 			String SimpleResponsiveBannerComponent = _Prefix + SimpleResponsiveBannerComponentModel._TYPECODE + _Suffix; 
-			String CMSTabParagraphContainer = _Prefix + CMSTabParagraphContainerModel._TYPECODE + _Suffix; 
+			String CMSTabParagraphContainer = _Prefix + CMSTabParagraphContainerModel._TYPECODE + _Suffix;
+			String Courses = _Prefix + CoursesModel._TYPECODE + _Suffix;
 		}
 	}
 
@@ -157,6 +159,10 @@ public interface ControllerConstants
 			{
 				String ImportCSVSavedCartPage = "pages/csv/importCSVSavedCartPage"; 
 			}
+			interface Courses
+			{
+				String Courses = "pages/course/courses1";
+			}
 		}
 
 		interface Fragments
@@ -197,6 +203,7 @@ public interface ControllerConstants
 				String ReviewsTab = "fragments/product/reviewsTab"; 
 				String StorePickupSearchResults = "fragments/product/storePickupSearchResults"; 
 			}
+
 		}
 	}
 }

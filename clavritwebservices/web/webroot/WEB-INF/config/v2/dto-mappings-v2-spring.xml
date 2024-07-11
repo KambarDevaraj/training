@@ -257,4 +257,9 @@
 			</map>
 		</property>
 	</bean>
+
+	<bean id="coursesFieldMapper" parent="fieldMapper">
+		<property name="sourceClass" value="com.clavrit.training.facades.courses.data.CoursesData"/>
+		<property name="destClass" value="com.hybris.clavrit.courses.data.CoursesDataWSDTO"/>
+	</bean>
 </beans>

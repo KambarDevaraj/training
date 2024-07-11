@@ -183,4 +183,20 @@
 		<property name="pagination" type="de.hybris.platform.commerceservices.search.pagedata.PaginationData"/>
 	</bean>
 
+	<bean class="com.hybris.clavrit.courses.data.CoursesDataWSDTO">
+		<property name="courseCode" type="String"/>
+		<property name="courseName" type="String"/>
+		<property name="courseDuration" type="String"/>
+		<property name="courseAmount" type="String"/>
+	</bean>
+
+	<bean class="com.hybris.clavrit.courses.data.CoursesDataListWSDTO">
+		<property name="courses" type="java.util.List &lt;com.hybris.clavrit.courses.data.CoursesDataWSDTO>"/>
+	</bean>
+
+	<bean class="com.hybris.clavrit.courses.data.CoursesDataList">
+		<property name="courses" type="java.util.List &lt;com.clavrit.training.facades.courses.data.CoursesData>"/>
+	</bean>
+
+
 </beans>

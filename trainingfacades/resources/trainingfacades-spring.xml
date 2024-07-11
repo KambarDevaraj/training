@@ -203,4 +203,22 @@
 		<property name="add" ref="lcPopulator"/>
 	</bean>
 
+	<bean id="coursesPopulator" class="com.clavrit.training.facades.populators.CoursesPopulator"/>
+
+	<alias name="coursesConverter" alias="coursesConverter"/>
+	<bean id="coursesConverter" parent="abstractPopulatingConverter">
+		<property name="targetClass" value="com.clavrit.training.facades.courses.data.CoursesData"/>
+		<property name="populators">
+			<list>
+				<ref bean="coursesPopulator"/>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="coursesFacade" class="com.clavrit.training.facades.courses.CoursesImpl">
+		<property name="coursesService" ref="coursesService"/>
+		<property name="coursesConverter" ref="coursesConverter"/>
+		<property name="modelService" ref="modelService"/>
+	</bean>
+
 </beans>
