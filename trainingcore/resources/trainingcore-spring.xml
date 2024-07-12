@@ -602,4 +602,6 @@
 
 	<bean id="customerSiteAge" class="com.clavrit.training.core.handler.CustomerSiteAgeHandler"/>
 
+	<bean id="productValidity" class="com.clavrit.training.core.handler.ProductValidityAttributeHandler"/>
+
 </beans>

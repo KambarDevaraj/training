@@ -370,7 +370,38 @@
                     </attribute>
                 </attributes>
             </itemtype>
+
+            <itemtype code="Product" autocreate="false" generate="false">
+                <attributes>
+                    <attribute autocreate="true" qualifier="validityPeriod" type="java.lang.Integer">
+                        <persistence type="dynamic" attributeHandler="productValidity"/>
+                        <modifiers read="true" write="true" search="true" initial="true"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
         </typegroup>
+
+        <typegroup name="Relation1">
+            <itemtype code="Account1" autocreate="true" generate="true">
+                <deployment table="NewAccounts1" typecode="10138"/>
+                <attributes>
+                    <attribute qualifier="accountNumber" type="java.lang.String">
+                        <modifiers read="true" write="true" unique="true" search="true"/>
+                        <persistence type="property" >
+                            <columntype>
+                                <value>VARCHAR(10)</value>
+                            </columntype>
+                        </persistence>
+                    </attribute>
+                    <attribute qualifier="accountType" type="java.lang.String">
+                        <modifiers read="true" write="true" optional="true" search="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+        </typegroup>
+
+
 
 
     </itemtypes>
